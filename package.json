@@ -4,6 +4,10 @@
   "private": true,
   "packageManager": "pnpm@8.15.6",
   "devDependencies": {
-    "turbo": "^2.7.3"
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "turbo": "^2.7.3",
+    "typescript": "^5.9.3"
   }
 }

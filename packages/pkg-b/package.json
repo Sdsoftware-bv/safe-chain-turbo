@@ -3,6 +3,9 @@
   "scripts": {
     "prebuild": "echo \"Executing pre-build step...\"",
     "build": "echo \"Welcome to the Turboverse.\" > output-file.txt && cat output-file.txt",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "check-types": "echo \"Types checked!\""
   },
   "dependencies": {

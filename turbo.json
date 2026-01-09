@@ -12,6 +12,15 @@
       ]
     },
     "prebuild": {},
+    "test": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "coverage/**"
+      ]
+    },
     "lint": {},
     "check-types": {}
   }
