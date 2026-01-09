@@ -101,7 +101,9 @@ The CI workflow (`.github/workflows/ci.yml`) runs automatically on every push an
 ### CI Features
 
 - **Dependency caching** - Uses pnpm's built-in caching for faster installs
-- **Turbo caching** - Caches build and test outputs using GitHub Actions cache, speeding up subsequent CI runs
+- **Vercel Remote Cache** - Shares build and test cache across CI runs and team members (requires setup - see [REMOTE_CACHE_SETUP.md](REMOTE_CACHE_SETUP.md))
 - **Frozen lockfile** - Ensures reproducible builds with `--frozen-lockfile`
 - **Parallel execution** - Turbo runs tests in parallel across packages
 - **Coverage artifacts** - Coverage reports are uploaded and accessible from the Actions tab for 30 days
+
+> **Note**: Remote caching requires setting up `TURBO_TOKEN` and `TURBO_TEAM` secrets in GitHub. See [REMOTE_CACHE_SETUP.md](REMOTE_CACHE_SETUP.md) for detailed setup instructions.
