@@ -38,9 +38,6 @@ jobs:
       - name: Run build
         run: pnpm turbo build
 
-      - name: Run tests
-        run: pnpm turbo test
-
       - name: Run tests with coverage
         run: pnpm turbo test:coverage
 

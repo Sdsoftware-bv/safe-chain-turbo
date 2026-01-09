@@ -21,6 +21,19 @@
         "coverage/**"
       ]
     },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
+    "test:coverage": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "coverage/**"
+      ]
+    },
     "lint": {},
     "check-types": {}
   }
