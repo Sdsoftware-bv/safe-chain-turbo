@@ -22,18 +22,17 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 8.15.6
-
-      - name: Install safe-chain
-        run: curl -fsSL https://github.com/AikidoSec/safe-chain/releases/download/0.0.5-new-proxy-beta/install-safe-chain.sh | sh -s -- --ci
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "pnpm"
 
+      - name: Install safe-chain
+        run: curl -fsSL https://github.com/AikidoSec/safe-chain/releases/download/0.0.5-new-proxy-beta/install-safe-chain.sh | sh -s -- --ci
+
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --safe-chain-logging=verbose
 
       - name: Run lint
         run: pnpm turbo lint
