@@ -29,7 +29,7 @@ jobs:
           cache: "pnpm"
 
       - name: Install safe-chain
-        run: curl -fsSL https://github.com/AikidoSec/safe-chain/releases/download/0.0.7-new-proxy-beta/install-safe-chain.sh | sh -s -- --ci
+        run: curl -fsSL https://github.com/AikidoSec/safe-chain/releases/download/0.0.9-new-proxy-beta/install-safe-chain.sh | sh -s -- --ci
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --safe-chain-logging=verbose
