@@ -8,8 +8,11 @@ on:
 
 jobs:
   ci:
-    name: CI Pipeline
+    name: CI Pipeline (${{ matrix.index }})
     runs-on: blacksmith-2vcpu-ubuntu-2204
+    strategy:
+      matrix:
+        index: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
@@ -50,6 +53,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-reports
+          name: coverage-reports-${{ matrix.index }}
           path: "**/coverage/**"
           retention-days: 30
